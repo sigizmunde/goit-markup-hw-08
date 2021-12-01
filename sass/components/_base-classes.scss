@@ -1,0 +1,30 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* header text */
+.section__heading {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &--no-top {
+    padding-top: 0;
+  }
+
+  &--gray {
+    background-color: var(--secondary-bg-color);
+  }
+}

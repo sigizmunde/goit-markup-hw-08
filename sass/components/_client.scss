@@ -1,0 +1,37 @@
+.clients {
+  @extend %list;
+  @include flex_center();
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  @include flex_center();
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+  text-decoration: none;
+
+  transition: color var(--transition-params),
+    border-color var(--transition-params);
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+.clients__logo {
+  display: block;
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

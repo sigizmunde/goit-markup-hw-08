@@ -1,0 +1,32 @@
+.jobs {
+  @extend %list;
+  display: flex;
+}
+
+.jobs__item {
+  position: relative;
+
+  width: calc((100% - 60) / 3);
+}
+
+.jobs__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.jobs__plate {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  @include flex_center();
+
+  color: var(--inverted-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,41 @@
+.hero {
+  //padding: 200px 0;
+  @include flex_center();
+  margin: 0 auto;
+  width: 1600px;
+  height: 600px;
+  color: var(--inverted-text-color);
+  background-color: var(--strong-bg-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.hero__heading {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.order-btn {
+  @extend %button;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--inverted-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
