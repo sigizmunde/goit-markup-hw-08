@@ -1,9 +1,10 @@
 .hero {
   //padding: 200px 0;
   @include flex_center();
+
   margin: 0 auto;
-  width: 1600px;
-  height: 600px;
+  height: 400px;
+
   color: var(--inverted-text-color);
   background-color: var(--strong-bg-color);
   background-image: linear-gradient(
@@ -15,16 +16,26 @@
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__heading {
   margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .order-btn {

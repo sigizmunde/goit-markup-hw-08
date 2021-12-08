@@ -1,7 +1,18 @@
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 /* header text */
@@ -9,16 +20,26 @@
   color: var(--secondary-text-color);
   font-weight: 700;
 
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &--no-top {
     padding-top: 0;
@@ -26,5 +47,11 @@
 
   &--gray {
     background-color: var(--secondary-bg-color);
+  }
+
+  &--desktop-only {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
   }
 }

@@ -1,6 +1,7 @@
 .jobs {
   @extend %list;
   display: flex;
+  //flex-wrap: wrap;
 }
 
 .jobs__item {
