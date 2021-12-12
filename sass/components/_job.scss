@@ -1,17 +1,12 @@
 .jobs {
   @extend %list;
-  display: flex;
-  //flex-wrap: wrap;
+  @include flex_grid(30px);
 }
 
 .jobs__item {
   position: relative;
 
-  width: calc((100% - 60) / 3);
-}
-
-.jobs__item:not(:last-child) {
-  margin-right: 30px;
+  @include flex_grid_item(3, 30px);
 }
 
 .jobs__plate {

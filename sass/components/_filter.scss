@@ -1,11 +1,24 @@
 .filter {
   @extend %list;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 40px;
+  margin-top: -8px;
+  margin-right: -8px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item:not(:last-child) {
+.filter__item {
+  margin-top: 8px;
   margin-right: 8px;
 }
 

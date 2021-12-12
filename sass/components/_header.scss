@@ -6,7 +6,7 @@
   @extend .container;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -14,26 +14,33 @@
 
 .site-nav,
 .contacts {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.site-nav {
+  flex-wrap: nowrap;
+  margin-right: auto;
 }
 
 .contacts {
+  flex-wrap: wrap;
+  justify-content: right;
   margin-left: auto;
+  margin-right: -30px;
 }
 
 .site-nav__item {
   display: block;
   margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .contacts__item {
-  @extend .site-nav__item;
+  display: block;
   margin-right: 30px;
-  // it inherits &:last-child from prototype
 }
 
 .contacts__link,
@@ -81,6 +88,13 @@
 
 .contacts__link {
   color: var(--main-text-color);
+  @media screen and (max-width: 1199px) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .contacts__icon {

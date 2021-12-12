@@ -1,20 +1,18 @@
 .clients {
   @extend %list;
   @include flex_center();
-  flex-wrap: wrap;
-  margin: -15px;
+  @include flex_grid(30px);
 }
 
 .clients__item {
-  margin: 15px;
-  width: calc((100% - 60px) / 2);
+  @include flex_grid_item(2, 30px);
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 90px) / 3);
+    @include flex_grid_item(3, 30px);
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 180px) / 6);
+    @include flex_grid_item(6, 30px);
   }
 }
 
