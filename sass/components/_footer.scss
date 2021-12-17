@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-around;
-  margin-bottom: -60px;
 
   @media screen and (min-width: 1200px) {
     justify-content: normal;
@@ -21,7 +20,6 @@
 
 .footer__block {
   width: 100%;
-  margin-bottom: 60px;
   text-align: center;
 
   @media screen and (min-width: 768px) {
@@ -34,6 +32,14 @@
 }
 
 .footer__block:not(:last-child) {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__block:nth-last-child(n + 3) {
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
