@@ -410,6 +410,10 @@ ul {
   color: var(--accent-color);
 }
 
+.menu__link--current {
+  color: var(--accent-color);
+}
+
 .menu__contacts {
   margin-top: auto;
   margin-bottom: 64px;
@@ -1189,6 +1193,10 @@ ul {
     width: calc((100% - (30px * 4)) / 4);
     margin: calc(30px / 2);
   }
+}
+
+.person__img {
+  width: 450px;
 }
 
 .person__info {

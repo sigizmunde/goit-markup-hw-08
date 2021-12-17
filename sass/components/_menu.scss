@@ -103,6 +103,10 @@
   }
 }
 
+.menu__link--current {
+  color: var(--accent-color);
+}
+
 .menu__contacts {
   margin-top: auto;
   margin-bottom: 64px;
