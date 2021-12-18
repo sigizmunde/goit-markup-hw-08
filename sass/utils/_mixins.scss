@@ -16,6 +16,8 @@
   }
 }
 @mixin flex_grid_item($cols, $gap, $v_gap: null) {
+  align-self: stretch;
+  
   width: calc((100% - (#{$gap} * #{$cols})) / #{$cols});
   margin: calc(#{$gap} / 2);
 

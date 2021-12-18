@@ -5,6 +5,7 @@
   @media screen and (min-width: 768px) {
     @include flex_grid(30px);
     justify-content: left;
+    align-items: stretch;
   }
 }
 
@@ -27,7 +28,11 @@
 }
 
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+
   text-decoration: none;
   color: var(--main-text-color);
 
@@ -45,18 +50,18 @@
   position: relative;
   overflow: hidden;
   width: auto;
-  height: 294px;
+  // height: 294px;
 }
 
 .portfolio__image {
-  min-width: 450px;
-  height: 292px;
+  // min-width: 450px;
+  height: auto;
 
   //this block is for constrain proportions and cropping image while resizing the page
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
 }
 
 .portfolio__overlay {
@@ -72,6 +77,8 @@
 
   padding: 24px;
 
+  overflow: auto;
+
   color: var(--inverted-text-color);
   background-color: var(--accent-color-overlay);
 
@@ -84,6 +91,7 @@
 }
 
 .portfolio__wrapper {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
