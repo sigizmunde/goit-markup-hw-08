@@ -74,8 +74,10 @@
 }
 
 .menu__site-nav {
-  margin-bottom: -32px;
+  margin-bottom: auto;
+}
 
+.menu__nav-list {
   @extend %list;
   font-weight: 500;
   font-size: 40px;
@@ -84,7 +86,7 @@
   color: var(--secondary-text-color);
 }
 
-.menu__item {
+.menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -108,7 +110,6 @@
 }
 
 .menu__contacts {
-  margin-top: auto;
   margin-bottom: 64px;
 
   @extend %list;
@@ -123,16 +124,23 @@
   line-height: calc(40 / 34);
 
   color: var(--accent-color);
+  @media screen and (max-width: 479px) {
+    font-size: 7vw;
+  }
 }
 
 .menu__mail {
   font-size: 24px;
   line-height: calc(28 / 24);
+  @media screen and (max-width: 479px) {
+    font-size: 5vw;
+  }
 }
 
 .sm-string {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
 
   margin: 0 -10px;
 
