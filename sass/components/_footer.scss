@@ -39,9 +39,9 @@
   }
 }
 
-.footer__block:nth-last-child(n + 3) {
+.footer__block:nth-child(n + 2) {
   @media screen and (min-width: 1200px) {
-    margin-right: 70px;
+    margin-left: 70px;
   }
 }
 

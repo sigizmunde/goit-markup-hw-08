@@ -79,6 +79,8 @@
 
   overflow: auto;
 
+  font-size: 18;
+  line-height: calc(28 / 18);
   color: var(--inverted-text-color);
   background-color: var(--accent-color-overlay);
 
@@ -87,6 +89,10 @@
   .portfolio__link:hover &,
   .portfolio__link:focus & {
     transform: none;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: calc(18 * 100vw / 480);
   }
 }
 

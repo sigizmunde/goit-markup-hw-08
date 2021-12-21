@@ -123,6 +123,7 @@
 
   width: 15px;
   height: 15px;
+  flex-shrink: 0;
   margin-right: 8px;
 
   color: transparent;
@@ -141,7 +142,7 @@
   }
 
   .agreement-checkbox:focus ~ & {
-    border: solid 2px var(--secondary-text-color);
+    border: solid 2px var(--accent-color);
   }
 }
 
